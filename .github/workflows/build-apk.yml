@@ -26,10 +26,7 @@ jobs:
           pip install --upgrade "buildozer==1.5.0"
           pip install --upgrade "kivy[full]==2.2.1"
 
-      - name: Install platform-tools (AIDL)
-        run: sdkmanager "platform-tools"
-
-      # خطوة تثبيت Android SDK و Build-Tools
+      # تثبيت Android SDK و Build-Tools أولاً
       - name: Install Android SDK & Build-Tools
         uses: android-actions/setup-android@v3
         with:
@@ -37,7 +34,10 @@ jobs:
           build-tools: 33.0.2
           cmdline-tools: true
 
-      
+      # تثبيت platform-tools بعد تثبيت SDK
+      - name: Install platform-tools
+        run: |
+          sdkmanager "platform-tools"
 
       # تصدير متغيّرات المسار للـ SDK
       - name: Export Android SDK paths
