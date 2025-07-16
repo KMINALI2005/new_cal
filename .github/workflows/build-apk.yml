@@ -28,7 +28,7 @@ jobs:
 
       # تثبيت Android SDK و Build-Tools أولاً
       - name: Install Android SDK & Build-Tools
-        uses: android-actions/setup-android@v4
+        uses: android-actions/setup-android@v3
         with:
           api-level: 33
           build-tools: 34.0.2
