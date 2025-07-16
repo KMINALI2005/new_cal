@@ -35,7 +35,7 @@ fullscreen = 0
 android.permissions = READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
 
 # !!! تعديل مهم: استخدام API حديث متوافق مع متطلبات جوجل بلاي
-android.api = 33
+android.api = 34
 android.minapi = 21
 
 # المعالجات التي سيعمل عليها التطبيق (يغطي معظم الأجهزة)
